@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon/favicon1.png" type="image/x-icon">
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    <title>Portfolio</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    <header class="header">
+        <img src="logo/Thlaes.png" class="logo" alt="Logo">
+        <nav class="menu-container">
+            <ul class="menu">
+                <li><a href="#about" class="botona">.about()</a></li>
+                <li><a href="#resume" class="botona">.resume()</a></li>
+                <li><a href="#projects" class="botona">.projects()</a></li>
+                <li><a href="#contact" class="botona">.contact()</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger" aria-label="Menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </header>
+
+    <div class="intro-section">
+        <div class="intro-header">
+            <div class="line1"></div>
+            <h1 class="greeting">Hi</h1>
+        </div>
+        <p class="name-intro">I'm <span class="name-highlight">Yassine Harroute</span></p>
+        <p class="intro">
+            I'm a <span class="hover-underline">full-stack software engineer</span> with a strong focus <span class="hover-underline">on web technologies,</span> driven by a deep passion  <span class="hover-underline">for</span> automation <span class="hover-underline">and DevSecOps.</span>.
+        </p>
+    </div>
+
+    <div class="scroll-indicator">
+        <div class="mouse"></div>
+        <div class="scrolltext">Scroll</div>
+    </div>
+
+    <div id="about" class="about-section">
+        <h2 class="about-title">.about<span class="h2">("me")</span></h2>
+        <div class="about-text">
+            <p>Hello! I’m Yassine Harroute, a dedicated and passionate full-stack web developer who thrives on creating engaging and user-friendly websites that make a difference. My journey in web development started from a deep-rooted curiosity for technology and has evolved into a professional career where I combine technical skills with creativity. As a freelancer, I specialize in crafting digital solutions that are carefully tailored to meet the unique needs of each client. I believe that every project is an opportunity to innovate and improve, providing users with seamless and memorable experiences.</p>
+            
+            <p>Currently, I'm working on a dating website project where I’m focused on developing intuitive interfaces and interactive features that enhance user engagement and foster meaningful connections. This project, alongside running my anime-focused website, ristoanime.com, has allowed me to explore creative front-end techniques and incorporate community-building features. Through ristoanime.com, I get to experiment with new ideas, integrating advanced designs and ensuring a platform that anime enthusiasts can enjoy and connect with.</p>
+            
+            <p>In addition to practical experience, I’m also committed to continuous learning and professional development. I study at EPEAP Kenitra, where I’m immersed in courses that help sharpen my technical knowledge and problem-solving skills. I’ve earned certifications from respected platforms like Free Code Camp and Coursera, which have solidified my foundation and understanding of best practices in coding and design. My technical skill set spans a wide range of web technologies and frameworks, including HTML, CSS, Git, Node.js, JavaScript, Python, PHP, Tailwind, and React. I’m also well-versed in using essential development tools such as npm, JSON, and algorithm design, all of which enhance my capabilities as a comprehensive developer.</p>
+
+            <p>In addition to technical skills, I bring a multilingual advantage to my work. Fluent in English, French, Arabic, and German, I can connect with clients across various cultural backgrounds, enhancing communication and collaboration in global projects. I value diversity and enjoy taking on projects that challenge me, push the boundaries of my skill set, and expose me to new perspectives. I believe that being open to learning new technologies and programming languages is vital in this fast-paced industry, and I’m constantly seeking knowledge to stay ahead.</p>
+
+            <p>If you’re looking for a developer who combines creativity, technical expertise, and an analytical approach to web design and development, I’d love to connect! I’m always excited to collaborate on projects that require a thoughtful approach to user experience, practical solutions, and a dedication to quality. Let’s create something incredible together!</p>
+        </div>
+    </div>
+
+    <div id="resume" class="resume-section">
+        <h1 class="main-resume-title">.resume<span class="title-bracket">("my journey")</span></h1>
+    </div>
+
+    <div class="resume">
+        <h2 class="resume-title">.workExperience()</h2>
+        <div class="timeline">
+            <div class="container left">
+                <div class="content">
+                    <div class="date">Jan 2024 - Present</div>
+                    <div class="title">Senior Software Engineer</div>
+                    <div class="company">@ GitGuardian</div>
+                    <div class="description">
+                        <p>Building and maintaining GitGuardian's security platform.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container right">
+                <div class="content">
+                    <div class="date">Jan 2022 - Dec 2023</div>
+                    <div class="title">Full Stack Software Engineer</div>
+                    <div class="company">@ Metamaze</div>
+                    <div class="description">
+                        <p>Part of the team in charge of maintaining and developing the company's adaptive IDP platform.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container left">
+                <div class="content">
+                    <div class="date">Jun 2021 - Dec 2021</div>
+                    <div class="title">Lead Developer</div>
+                    <div class="company">@ Yogalive</div>
+                    <div class="description">
+                        <p>Built a full class booking and video on demand platform, along with mobile apps for both iOS and Android.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skills-section">
+        <h2 class="skills-title">.skills()</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">TypeScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Frameworks</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span class="skill-name">React</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Node.js</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Django</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Tools</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span class="skill-name">Git</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Docker</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 87%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">AWS</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 83%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects" class="projects-cards">
+        <h2 class="project-title">.projects()</h2>
+        <p>Here are some of my projects</p>
+        <div class="cardsProject">
+            <div class="cards">
+                <h4>Dating App
+                    <a href="https://github.com/Thalesmar" target="_blank"><i class="fa fa-github"></i></a>
+                </h4>
+                <p class="description">A platform designed to connect volunteers and individuals in need of assistance across Morocco following the 2023 earthquake</p>
+            </div>
+            <div class="cards">
+                <h4>My portfolio
+                    <a href="https://github.com/Thalesmar" target="_blank"><i class="fa fa-github"></i></a>
+                </h4>
+                <p class="description">I created my first portfolio from scratch, designing and coding it to showcase my skills and projects in web development.</p>
+            </div>
+            <div class="cards">
+                <h4>coming soon
+                    <a href="https://github.com/Thalesmar" target="_blank"><i class="fa fa-github"></i></a>
+                </h4>
+                <p class="description">.....</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="contact">
+        <h2 class="contact-title">.contact()</h2>
+        <p class="contact-text">I am always on the lookout for new challenges and opportunities to learn and grow. If you have a project or idea that you think I could help with, I would love to hear from you. Please feel free to get in touch via the contact button below or through any of the social media links.e</p>
+            <div class="hello-button">
+                <button class="hello-button-style">Say hello!</button>
+            </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="logo-footer">
+                <img src="logo/Thlaes.png" alt="Logo">
+            </div>
+            
+            <div class="credit-pos">
+                <div class="credit-wrapper">
+                    <span class="CREDIT">Credit</span>
+                    <span class="ipeap">Epeap Kenitra</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="privacy">
+            <span>© 2020-2024 </span>
+            <span class="line-middle"> | </span>
+            <span>Thales</span>
+        </div>
+    </footer>
+
+    <div class="left-fixed">
+        <a class="left-styles rotate" href="mailto:hello@thales.co">hello@thales.co</a>
+        <div class="line-1"></div>
+    </div>
+
+    <div class="right-fixed">
+        <div class="social-icons">
+            <a href="https://github.com/Thalesmar" target="_blank" class="social-link">
+                <i class="fa fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/YourUsername" target="_blank" class="social-link">
+                <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://instagram.com/thaleshr1" target="_blank" class="social-link">
+                <i class="fa fa-instagram"></i>
+            </a>
+        </div>
+        <div class="line-2"></div>
+    </div>
+</body>
+</html>
