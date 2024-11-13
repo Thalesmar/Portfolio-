@@ -468,6 +468,9 @@ body {
     padding: 10px 40px;
     position: relative;
     width: 50%;
+    &.freelance-entry {
+        margin-top: 2rem;
+    }
 }
 
 .container::after {
@@ -1423,7 +1426,7 @@ html {
     }
 
     .left-styles {
-        writing-mode: horizontal-tb;
+        writing-mode: vertical-lr;
         transform: none;
         margin-bottom: 0;
         font-size: 0.8rem;
@@ -1568,9 +1571,6 @@ section {
 }
 
 @media screen and (max-width: 480px) {
-    .left-fixed, .right-fixed {
-        display: none;
-    }
 
     .mobile-footer-links {
         display: flex;
@@ -1582,4 +1582,194 @@ section {
 
 .title-bracket{
     color: rgb(247, 201, 160);
+}
+
+.side-text {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  white-space: nowrap;
+  font-size: 16px;
+  z-index: 1000;
+}
+
+/* Optional: Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .side-text {
+    left: 15px; /* Adjust position for mobile if needed */
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+}
+
+/* Hide mobile footer by default */
+.mobile-footer {
+  display: none;
+}
+
+/* Show vertical social icons only on specific mobile sizes */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .mobile-footer {
+    display: block;
+    position: fixed;
+    transform: translateY(50%);
+    z-index: 1000;
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .social-icons a {
+    color: #333333;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .social-icons a:hover {
+    color: #666666;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+  }
+}
+
+/* Hide social icons for mobile devices under 480px */
+@media screen and (max-width: 480px) {
+  .mobile-footer {
+    display: none;
+  }
+}
+
+/* Hide mobile footer by default (for desktop) */
+.mobile-footer {
+  display: none;
+}
+
+/* Mobile footer styles */
+@media screen and (max-width: 768px) {
+  .mobile-footer {
+    display: block;
+    position: fixed;
+    bottom: 10px; /* Added space from bottom */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .social-icons a {
+    color: var(--text-color, #333333);
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    opacity: 0.75;
+    padding: 8px; /* Larger touch target */
+  }
+
+  .social-icons a:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 360px) {
+  .social-icons {
+    gap: 20px;
+  }
+
+  .social-icons a {
+    font-size: 14px;
+  }
+}
+
+
+.experience-content{
+    background-color: rgb(16, 16, 16);
+    padding:1.2rem;
+}
+
+
+
+.resume-section{
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+}
+
+/* Container for title and content */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Title styles */
+.page-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-color, #333);
+}
+
+/* Resume styles */
+.resume {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px; /* Space between resume and card */
+}
+
+/* Card styles */
+.card1, .card2 {
+    background: #2c2f48;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.card-2{
+    background-color: rgb(16, 16, 16);
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  /* Adjust circle position */
+  .container::before {
+    left: 22px;  /* Align circles with the timeline */
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Adjust both left and right containers to have same circle position */
+  .left::before,
+  .right::before {
+    left: 22px;
+  }
 }
