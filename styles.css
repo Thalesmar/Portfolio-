@@ -658,7 +658,8 @@ body {
 
     .resume-title,
     .skills-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        padding-bottom: 1rem;
     }
 }
 
@@ -670,7 +671,7 @@ body {
 
     .resume-title,
     .skills-title {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 }
 
@@ -981,7 +982,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 4rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .logo-footer {
@@ -1576,7 +1577,6 @@ section {
     display: flex;
     align-items: center;
     padding-bottom: 1rem;
-    font-size: 3rem;
     font-weight: 100;
     
 }
@@ -1629,7 +1629,6 @@ section {
     .left-styles {
         writing-mode: vertical-lr;
         transform: none;
-        margin-bottom: -1rem;
         font-size: 0.8rem;
         transform: rotate(-90deg);
     }
@@ -1723,4 +1722,163 @@ section {
         font-size: 1.1rem;
     }
 }
+
+/* Mobile footer social icons and email */
+@media screen and (max-width: 768px) {
+    .mobile-footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin: 2rem 0;
+        width: 100%;
+    }
+
+    .mobile-social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .mobile-social-icons .social-link {
+        color: white;
+        font-size: 1.5rem; /* Increased size for better visibility */
+        transition: all 0.3s ease;
+    }
+
+    .mobile-social-icons .social-link:hover {
+        color: rgb(247, 201, 160);
+        transform: translateY(-2px);
+    }
+
+    .mobile-email {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem; /* Increased size */
+        transition: color 0.3s ease;
+        display: block; /* Ensure visibility */
+        text-align: center;
+    }
+
+    .mobile-email:hover {
+        color: rgb(247, 201, 160);
+    }
+
+    /* Hide desktop fixed elements */
+    .left-fixed,
+    .right-fixed {
+        display: none;
+    }
+
+    /* Footer structure */
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer-content {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Additional iPhone-specific fixes */
+@supports (-webkit-touch-callout: none) {
+    .mobile-footer-links {
+        padding-bottom: env(safe-area-inset-bottom, 20px); /* iOS safe area */
+    }
+}
+
+/* Very small screens */
+@media screen and (max-width: 360px) {
+    .mobile-social-icons {
+        gap: 1.5rem;
+    }
+
+    .mobile-social-icons .social-link {
+        font-size: 1.3rem;
+    }
+}
+
+/* Footer base styles */
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0;
+    position: relative;
+    min-height: 200px;
+    width: 100%;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    margin-bottom: 2rem;
+}
+
+/* Mobile footer styles - UPDATED */
+.mobile-footer-links {
+    display: none; /* Hidden by default on desktop */
+}
+
+@media screen and (max-width: 768px) {
+    /* Hide desktop elements */
+    .left-fixed,
+    .right-fixed {
+        display: none;
+    }
+
+    /* Show mobile footer */
+    .mobile-footer-links {
+        display: flex !important; /* Force display */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 2rem 0;
+        margin: 0;
+    }
+
+    .mobile-social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .mobile-social-icons .social-link {
+        display: inline-block;
+        color: white;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .mobile-social-icons .social-link:hover {
+        color: rgb(247, 201, 160);
+    }
+
+    .mobile-email {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .mobile-email:hover {
+        color: rgb(247, 201, 160);
+    }
+
+    .footer-content {
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* iPhone specific fixes */
+@supports (-webkit-touch-callout: none) {
+    .mobile-footer-links {
+        padding-bottom: max(2rem, env(safe-area-inset-bottom));
+    }
 }
