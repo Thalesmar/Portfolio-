@@ -48,6 +48,7 @@ body {
 .logo {
     width: 120px;
     height: auto;
+    margin-left: -4rem;
 }
 
 @media (max-width: 768px) {
@@ -970,7 +971,6 @@ body {
 .footer {
     display: flex;
     flex-direction: column;
-    padding: 3rem 0;
     position: relative;
     min-height: 200px;
     width: 100%;
@@ -987,6 +987,7 @@ body {
 
 .logo-footer {
     margin-left: 0;
+    cursor: pointer;
 }
 
 .logo-footer img {
@@ -1802,7 +1803,6 @@ section {
 .footer {
     display: flex;
     flex-direction: column;
-    padding: 3rem 0;
     position: relative;
     min-height: 200px;
     width: 100%;
@@ -1881,4 +1881,17 @@ section {
     .mobile-footer-links {
         padding-bottom: max(2rem, env(safe-area-inset-bottom));
     }
+}
+
+/* Add smooth scrolling behavior to html element if not already present */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Adjust based on your header height */
+}
+
+/* Add smooth scrolling behavior to html element if not already present */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Adjust based on your header height */
+}
 }

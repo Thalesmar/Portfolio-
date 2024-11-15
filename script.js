@@ -3,37 +3,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuContainer = document.querySelector('.menu-container');
     const menuLinks = document.querySelectorAll('.menu a');
     const body = document.body;
+    const logo = document.querySelector('.header .logo');
+    const logoFooter = document.querySelector('.logo-footer');
 
-    // Toggle menu
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
+    // Toggle menu when hamburger is clicked
+    hamburger.addEventListener('click', function() {
         menuContainer.classList.toggle('active');
-        body.style.overflow = menuContainer.classList.contains('active') ? 'hidden' : '';
-    });
-
-    // Close menu when clicking a link
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            menuContainer.classList.remove('active');
-            body.style.overflow = '';
-        });
+        // Optional: Toggle hamburger animation class if you have one
+        hamburger.classList.toggle('active');
     });
 
     // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (menuContainer.classList.contains('active') && 
-            !menuContainer.contains(e.target) && 
-            !hamburger.contains(e.target)) {
-            hamburger.classList.remove('active');
+    document.addEventListener('click', function(event) {
+        if (!menuContainer.contains(event.target) && !hamburger.contains(event.target)) {
             menuContainer.classList.remove('active');
-            body.style.overflow = '';
+            hamburger.classList.remove('active');
         }
     });
 
-    // Prevent menu from closing when clicking inside
-    menuContainer.addEventListener('click', (e) => {
-        e.stopPropagation();
+    // Close menu when clicking a menu item
+    const menuItems = document.querySelectorAll('.menu a');
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            menuContainer.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
     });
 
     // Smooth scroll with header offset
@@ -150,4 +144,32 @@ document.addEventListener('DOMContentLoaded', function() {
             ticking = true;
         }
     });
+
+    // Instant scroll to top functionality for footer logo
+    if (logoFooter) {
+        logoFooter.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Add mobile logo positioning
+    function adjustLogoPosition() {
+        if (window.innerWidth <= 768) {
+            logo.style.marginRight = 'auto';
+            logo.style.paddingLeft = '15px';
+        } else {
+            logo.style.marginRight = '';
+            logo.style.paddingLeft = '';
+        }
+    }
+    
+    // Initial call
+    adjustLogoPosition();
+    
+    // Update on resize
+    window.addEventListener('resize', adjustLogoPosition);
 });
